@@ -1,16 +1,24 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-// import HelloWorld from '@/components/HelloWorld';
-// import PrincipalLogin from '@/components/PrincipalLogin';
+import HelloWorld from '@/components/HelloWorld';
+import PrincipalLogin from '@/components/PrincipalLogin';
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'app-main',
-    //   component: [PrincipalLogin, HelloWorld],
-    // },
+    {
+      path: '/',
+      name: 'app-main-manager',
+      component: [PrincipalLogin, HelloWorld],
+    },
+    {
+      path: '/login',
+      name: 'app-login',
+    },
+    {
+      path: '/register',
+      name: 'app-register',
+    },
   ],
 });

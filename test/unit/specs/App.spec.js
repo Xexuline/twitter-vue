@@ -34,7 +34,7 @@ describe('App.vue ', () => {
 
     const h1 = wrapper.find('.login h1');
     expect(wrapper.isVueInstance()).toBeTruthy();
-    expect(h1.text()).toBe('Pagina login inicial');
+    expect(h1.text()).toBe('Título de twitter');
   });
 
   it('should render dashboard component', () => {

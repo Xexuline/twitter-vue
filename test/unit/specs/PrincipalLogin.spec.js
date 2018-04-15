@@ -5,6 +5,6 @@ describe('app-principal-login', () => {
   it('should render', () => {
     const wrapper = mount(PrincipalLogin);
     expect(wrapper.isVueInstance()).toBeTruthy();
-    expect(wrapper.find('.login h1').text()).toBe('Pagina login inicial');
+    expect(wrapper.find('.login h1').text()).toBe('Título de twitter');
   });
 });
