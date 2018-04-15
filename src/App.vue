@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <component
-    :is="currentPage"
-    ></component>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -13,33 +11,23 @@ import Dashboard from '@/components/Dashboard';
 
 export default {
   name: 'App',
-  beforeMount() {
-    debugger;
-    this.currentPage = this.getToken()
-      ? this.dynamicPages[1]
-      : this.dynamicPages[0];
-  },
-  data() {
-    return {
-      currentPage: null,
-      dynamicPages: ['app-principal-login', 'app-dashboard'],
-    };
-  },
-  methods: {
-    ...mapGetters(['getToken']),
-  },
-  components: {
-    PrincipalLogin,
-    Dashboard,
-  },
 };
 </script>
 
 <style>
 html,
 body {
-  height: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 14pt;
+  line-height: 20pt;
+  background-attachment: scroll;
+  overflow-y: auto;
+}
+#app {
+  max-height: 98vh;
+  overflow: hidden;
 }
 /* #app {
   font-family: "Segoe UI",Arial,sans-serif;;
