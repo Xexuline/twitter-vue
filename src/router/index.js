@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
-import PrincipalLogin from '@/components/PrincipalLogin';
+import MainManager from '@/components/MainManager';
+// import PrincipalLogin from '@/components/PrincipalLogin';
 
 Vue.use(Router);
 
@@ -10,7 +10,7 @@ export default new Router({
     {
       path: '/',
       name: 'app-main-manager',
-      component: [PrincipalLogin, HelloWorld],
+      component: MainManager,
     },
     {
       path: '/login',

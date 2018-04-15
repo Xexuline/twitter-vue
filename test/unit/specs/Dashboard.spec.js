@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import Dashboard from '@/components/Dashboard';
 
-describe('app-dashboard', () => {
+describe('Dashboard.vue', () => {
   it('should render', () => {
     const wrapper = mount(Dashboard);
     expect(wrapper.isVueInstance()).toBeTruthy();
