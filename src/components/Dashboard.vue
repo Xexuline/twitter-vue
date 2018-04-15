@@ -1,7 +1,6 @@
 <template>
 <div
-><p>dashboard</p>
-<router-view></router-view>
+><h1>Dashboard</h1>
 </div>
 </template>
 <script>

@@ -1,5 +1,4 @@
 const store = {
-  login: null,
   token: null,
 };
 

@@ -2,7 +2,7 @@
 
 Preparing a website like twitter with vue
 
-> Repo made just to improve vue, vuex mechanics, css...
+> Repo made just to improve vue, vuex mechanics, css, testing on vue...
 
 ## Build Setup
 

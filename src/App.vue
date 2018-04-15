@@ -8,6 +8,8 @@
 
 <script>
 import { mapGetters } from 'vuex';
+import PrincipalLogin from '@/components/PrincipalLogin';
+import Dashboard from '@/components/Dashboard';
 
 export default {
   name: 'App',
@@ -25,10 +27,10 @@ export default {
   },
   methods: {
     ...mapGetters(['getToken']),
-    checkLogged() {
-      const token = window.sessionStorage.getItem('token');
-      return token;
-    },
+  },
+  components: {
+    PrincipalLogin,
+    Dashboard,
   },
 };
 </script>
