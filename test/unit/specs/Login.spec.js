@@ -13,23 +13,23 @@ describe('Login.vue', () => {
     expect(wrapper.text()).toContain('Login');
   });
 
-  it('should have password and user empty',()=>{
-    const wrapper = shallow(Login, {localVue,router});
+  it('should have password and user empty', () => {
+    const wrapper = shallow(Login, { localVue, router });
     expect(wrapper.vm.user).toBe('');
     expect(wrapper.vm.passwd).toBe('');
-
+    /* eslint no-underscore-dangle: ["error", { "allow": ["_data"] }] */
     expect(wrapper.vm._data).toHaveProperty('user');
     expect(wrapper.vm._data).toHaveProperty('passwd');
   });
 
-  it('should render user login',()=>{
-    const wrapper = shallow(Login, {localVue,router});
+  it('should render user login', () => {
+    const wrapper = shallow(Login, { localVue, router });
     const fkUser = 'fakeUser';
-    const fkPwd = 'fakePassword'
+    const fkPwd = 'fakePassword';
 
-    wrapper.setData({user:fkUser});
-    wrapper.setData({passwd:fkPwd});
+    wrapper.setData({ user: fkUser });
+    wrapper.setData({ passwd: fkPwd });
     expect(wrapper.vm.user).toContain(fkUser);
     expect(wrapper.vm.passwd).toContain(fkPwd);
-  })
+  });
 });
